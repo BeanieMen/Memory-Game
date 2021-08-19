@@ -1,0 +1,235 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Assests/Solid color.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/3X3 DIFFICULTY.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Block_8.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Block_7.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Block_6.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Block_9.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Block_5.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Block_2.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Block_3.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/Block_4.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Block_1.gd" type="Script" id=11]
+[ext_resource path="res://Fonts/Arial 32.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Fonts/Arial 25.tres" type="DynamicFont" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="RectangleShape2D" id=5]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+[sub_resource type="RectangleShape2D" id=7]
+
+[sub_resource type="RectangleShape2D" id=8]
+
+[sub_resource type="RectangleShape2D" id=9]
+
+[node name="Node" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Block_1" type="Area2D" parent="."]
+gravity_vec = Vector2( 0, 0 )
+
+[node name="Block_1_spr" type="Sprite" parent="Block_1"]
+position = Vector2( 195, 181 )
+texture = ExtResource( 1 )
+script = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block_1"]
+position = Vector2( 195, 181 )
+scale = Vector2( 3.2, 3.2 )
+shape = SubResource( 1 )
+
+[node name="Block_2" type="Area2D" parent="."]
+
+[node name="Block_2_spr" type="Sprite" parent="Block_2"]
+position = Vector2( 260, 181 )
+texture = ExtResource( 1 )
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block_2"]
+position = Vector2( 260, 181 )
+scale = Vector2( 3.2, 3.2 )
+shape = SubResource( 2 )
+
+[node name="Block_3" type="Area2D" parent="."]
+
+[node name="Block_3_spr" type="Sprite" parent="Block_3"]
+position = Vector2( 325, 181 )
+texture = ExtResource( 1 )
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block_3"]
+position = Vector2( 325, 181 )
+scale = Vector2( 3.2, 3.2 )
+shape = SubResource( 3 )
+
+[node name="Block_4" type="Area2D" parent="."]
+
+[node name="Block_4_spr" type="Sprite" parent="Block_4"]
+position = Vector2( 195, 246 )
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block_4"]
+position = Vector2( 195, 246 )
+scale = Vector2( 3.2, 3.2 )
+shape = SubResource( 4 )
+
+[node name="Block_5" type="Area2D" parent="."]
+
+[node name="Block_5_spr" type="Sprite" parent="Block_5"]
+position = Vector2( 260, 246 )
+texture = ExtResource( 1 )
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block_5"]
+position = Vector2( 260, 246 )
+scale = Vector2( 3.2, 3.2 )
+shape = SubResource( 5 )
+
+[node name="Block_6" type="Area2D" parent="."]
+
+[node name="Block_6_spr" type="Sprite" parent="Block_6"]
+position = Vector2( 325, 246 )
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block_6"]
+position = Vector2( 325, 246 )
+scale = Vector2( 3.2, 3.2 )
+shape = SubResource( 6 )
+
+[node name="Block_7" type="Area2D" parent="."]
+
+[node name="Block_7_spr" type="Sprite" parent="Block_7"]
+position = Vector2( 195, 311 )
+texture = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block_7"]
+position = Vector2( 195, 311 )
+scale = Vector2( 3.2, 3.2 )
+shape = SubResource( 7 )
+
+[node name="Block_8" type="Area2D" parent="."]
+
+[node name="Block_8_spr" type="Sprite" parent="Block_8"]
+position = Vector2( 260, 311 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block_8"]
+position = Vector2( 260, 311 )
+scale = Vector2( 3.2, 3.2 )
+shape = SubResource( 8 )
+
+[node name="Block_9" type="Area2D" parent="."]
+
+[node name="Block_9_spr" type="Sprite" parent="Block_9"]
+position = Vector2( 325, 311 )
+texture = ExtResource( 1 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block_9"]
+position = Vector2( 325, 311 )
+scale = Vector2( 3.2, 3.2 )
+shape = SubResource( 9 )
+
+[node name="TimeColored" type="Timer" parent="."]
+wait_time = 0.08
+one_shot = true
+
+[node name="GameStart" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Lost" type="Label" parent="."]
+visible = false
+margin_left = 147.178
+margin_top = 21.5675
+margin_right = 356.178
+margin_bottom = 60.5675
+custom_fonts/font = ExtResource( 12 )
+text = "You Lost"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="."]
+visible = false
+margin_left = 146.649
+margin_top = 72.4217
+margin_right = 355.649
+margin_bottom = 111.422
+custom_fonts/font = ExtResource( 12 )
+text = "Score "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="."]
+visible = false
+margin_left = 160.0
+margin_top = 373.0
+margin_right = 361.0
+margin_bottom = 415.0
+custom_fonts/font = ExtResource( 12 )
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+visible = false
+margin_left = 162.0
+margin_top = 423.0
+margin_right = 361.0
+margin_bottom = 465.0
+custom_fonts/font = ExtResource( 12 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 13 )
+text = "Lives: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="Block_1" to="." method="_on_Block_1_mouse_entered"]
+[connection signal="mouse_exited" from="Block_1" to="." method="_on_Block_1_mouse_exited"]
+[connection signal="mouse_entered" from="Block_2" to="." method="_on_Block_2_mouse_entered"]
+[connection signal="mouse_exited" from="Block_2" to="." method="_on_Block_2_mouse_exited"]
+[connection signal="mouse_entered" from="Block_3" to="." method="_on_Block_3_mouse_entered"]
+[connection signal="mouse_exited" from="Block_3" to="." method="_on_Block_3_mouse_exited"]
+[connection signal="mouse_entered" from="Block_4" to="." method="_on_Block_4_mouse_entered"]
+[connection signal="mouse_exited" from="Block_4" to="." method="_on_Block_4_mouse_exited"]
+[connection signal="mouse_entered" from="Block_5" to="." method="_on_Block_5_mouse_entered"]
+[connection signal="mouse_exited" from="Block_5" to="." method="_on_Block_5_mouse_exited"]
+[connection signal="mouse_entered" from="Block_6" to="." method="_on_Block_6_mouse_entered"]
+[connection signal="mouse_exited" from="Block_6" to="." method="_on_Block_6_mouse_exited"]
+[connection signal="mouse_entered" from="Block_7" to="." method="_on_Block_7_mouse_entered"]
+[connection signal="mouse_exited" from="Block_7" to="." method="_on_Block_7_mouse_exited"]
+[connection signal="mouse_entered" from="Block_8" to="." method="_on_Block_8_mouse_entered"]
+[connection signal="mouse_exited" from="Block_8" to="." method="_on_Block_8_mouse_exited"]
+[connection signal="mouse_entered" from="Block_9" to="." method="_on_Block_9_mouse_entered"]
+[connection signal="mouse_exited" from="Block_9" to="." method="_on_Block_9_mouse_exited"]
+[connection signal="timeout" from="TimeColored" to="." method="_on_TimeColored_timeout"]
+[connection signal="timeout" from="GameStart" to="." method="_on_GameStart_timeout"]
+[connection signal="pressed" from="Restart" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Button2_pressed"]
