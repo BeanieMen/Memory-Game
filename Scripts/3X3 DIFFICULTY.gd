@@ -203,13 +203,15 @@ func _on_Block_9_mouse_entered():
 func _on_Block_9_mouse_exited():
 	Block_9_mouse_over = false
 	
-#Restart and reload button
+#Restart,Home and reload button
 func _on_Restart_pressed():
 	get_tree().reload_current_scene()
 
 func _on_Quit_pressed():
 	get_tree().quit()
 
+func _on_Home_pressed():
+	get_tree().change_scene("res://Scenes/Home.tscn")
 
 func _process(delta):
 	
@@ -217,6 +219,7 @@ func _process(delta):
 	if lives <= 0:
 		$Lost.visible = true
 		$Score.visible = true
+		$Home.visible = true
 		$Quit.visible = true
 		$Restart.visible = true
 		$Score.text = "Score: " + String(Global.score)
@@ -224,4 +227,6 @@ func _process(delta):
 	if targetClicked == 3:
 		Global.score += 1
 		get_tree().reload_current_scene()
+
+
 
