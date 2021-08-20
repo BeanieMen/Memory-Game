@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Sprite
 
 
 # Declare member variables here. Examples:
@@ -14,14 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_3X3_pressed():
-	get_tree().change_scene("res://Scenes/3X3_DIFFICULTY.tscn")
-
-func _on_4X4_pressed():
-	get_tree().change_scene("res://Scenes/4X4_DIFFICULTY.tscn")
-
-
-func _on_5X5_pressed():
-	get_tree().change_scene("res://Scenes/5X5DIFFICULTY.tscn")
